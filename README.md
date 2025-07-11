@@ -1,4 +1,4 @@
-# Check Config
+# Check Configasdlkja sdlkajs d
 
 It can be cumbersome when you have multiple projects and environments with configuration files which need to be
 upgraded and keep in sync regularly. Check-config will help you with i.e. making sure that the configuration
