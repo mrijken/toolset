@@ -1,0 +1,33 @@
+[package]
+name = "toolset"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+homepage = "https://github.com/mrijken/toolset"
+documentation = "https://toolset.readthedocs.io"
+repository = "https://github.com/mrijken/toolset"
+keywords = ["script", "install"]
+authors = ["Marc Rijken <marc@rijken.org>"]
+readme = "README.md"
+description = "Generic installer for npx, uvx, pipx, cargo install..."
+
+exclude = [".github/*", "videos/*"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[[bin]]
+name = "toolset"
+
+[dependencies]
+log = "0.4.20"
+clap = { version = "4.3.19", features = ["derive"] }
+regex = "1.9.1"
+thiserror = "2.0.9"
+serde_json = "1.0.104"
+clap-verbosity-flag = "3.0.2"
+env_logger = "0.11.6"
+url = "2.5.4"
+
+[profile.release]
+panic = "abort"
+lto = "fat"
+codegen-units = 1
